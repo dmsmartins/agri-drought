@@ -1,0 +1,35 @@
+{
+  "data": "synthetic demonstration only; not independent validation",
+  "physics_engine": "0.1.0-web",
+  "indices_engine": "0.2.0",
+  "checks": [
+    {
+      "scale": 1,
+      "months": 492,
+      "RT_valid": 451,
+      "comparison_valid_months": 121,
+      "passed": true
+    },
+    {
+      "scale": 3,
+      "months": 492,
+      "RT_valid": 492,
+      "comparison_valid_months": 132,
+      "passed": true
+    },
+    {
+      "scale": 6,
+      "months": 492,
+      "RT_valid": 492,
+      "comparison_valid_months": 132,
+      "passed": true
+    },
+    {
+      "scale": 12,
+      "months": 492,
+      "RT_valid": 492,
+      "comparison_valid_months": 132,
+      "passed": true
+    }
+  ]
+}

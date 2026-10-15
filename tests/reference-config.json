@@ -1,0 +1,47 @@
+{
+  "site_id": "EXEMPLO_SINTETICO_NAO_CALIBRADO",
+  "data_kind": "synthetic",
+  "soil": {
+    "theta_fc": 0.3,
+    "theta_wp": 0.15,
+    "theta_sat": 0.45,
+    "ze_m": 0.1,
+    "rew_mm": 9.0
+  },
+  "crop": {
+    "root_depth_m": 1.7,
+    "cover": 0.5,
+    "height_m": 3.0,
+    "p": 0.65,
+    "adjust_p": true
+  },
+  "runoff": {
+    "method": "scs_cn_fixed",
+    "cn": 70.0,
+    "initial_abstraction_ratio": 0.2
+  },
+  "numerics": {
+    "et_substeps": 4,
+    "rain_timing": "rain_et"
+  },
+  "spinup": {
+    "years": 3,
+    "max_cycles": 20,
+    "tolerance_mm": 0.05
+  },
+  "analysis_start": "1985-01-01",
+  "reference": {
+    "start_year": 1985,
+    "end_year": 2014,
+    "min_years": 30
+  },
+  "provenance": {
+    "status": "synthetic_demonstration_not_field_calibration",
+    "soil": "Illustrative loam from previous project; not measured.",
+    "kcb": "FAO56 Table17 olive 40-60% canopy endpoints .55/.65. Monthly allocation .60 in April/November is ASSUMED, not a published monthly calendar. Replace all 12 values with user inputs. No automatic local climate correction.",
+    "root_depth": "1.7m: adopted upper end of FAO56 olive range, not a measurement.",
+    "runoff": "CN=70 assumed constant, daily event approximation, not continuous infiltration.",
+    "eto": "Supplied externally; example values generated, not FAO-PM weather estimates.",
+    "management": "Mature rainfed orchard, fixed geometry, no active understory; no irrigation, interception, capillary rise, snow or frost."
+  }
+}

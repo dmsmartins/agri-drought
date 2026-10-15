@@ -1,0 +1,51 @@
+name: Publish GitHub Pages
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: node --test tests/engine.test.cjs tests/worker.test.cjs tests/indices.test.cjs
+      - run: node tests/integration-indices.cjs
+      - run: node tests/parity.cjs
+      - run: python build.py
+      - run: python tests/static_check.py
+      - run: npm install --no-save --package-lock=false playwright@1.62.1
+      - run: npx playwright install --with-deps chromium
+      - run: node tests/browser-smoke.cjs
+      - name: Stage only public application assets
+        run: |
+          mkdir -p _site/scripts
+          cp index.html .nojekyll LICENSE NOTICE.md METODOLOGIA.md INDICES-E-VALIDACAO.md _site/
+          cp scripts/benchmarks.R _site/scripts/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/configure-pages@v5
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4

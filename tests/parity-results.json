@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "daily_rows": 16802,
+  "monthly_rows": 492,
+  "max_abs_difference_by_variable": {
+    "available_water": 1.9895196601282805e-13,
+    "TAW": 2.842170943040401e-14,
+    "Dr": 2.2737367544323206e-13,
+    "soil_water": 2.2737367544323206e-13,
+    "ETa": 1.021405182655144e-14,
+    "transpiration_actual": 1.021405182655144e-14,
+    "soil_evaporation": 1.1102230246251565e-15,
+    "runoff": 0,
+    "deep_percolation": 5.684341886080802e-14,
+    "Ks": 2.886579864025407e-15,
+    "Ke": 3.3306690738754696e-16
+  },
+  "max_percentile_difference": 0,
+  "seconds": 0.31194671900000004,
+  "reference": "Python Agri-SECA Kcb mensal v0.1, synthetic 1980–2025; not field validation"
+}

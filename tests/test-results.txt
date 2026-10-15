@@ -1,0 +1,45 @@
+✔ CSV: quoted fields, BOM, semicolon and comma decimals (2.562525ms)
+✔ CSV: reject missing values, duplicated and gapped dates (0.587844ms)
+✔ Station identifiers do not modify object prototypes (0.502536ms)
+✔ Reject impossible dates and meteorology (0.202885ms)
+✔ Reject invalid soil, roots, coefficients and reference (0.539151ms)
+✔ Full-profile storage has complementary surface areas (1.031321ms)
+✔ Rain at FC with zero ET drains without mass creation (0.411148ms)
+✔ Exhausted profile cannot provide ET (0.268354ms)
+✔ Demand zero gives undefined monthly deficit (2.836999ms)
+✔ Monthly Kcb is used on leap day (0.456196ms)
+✔ Extreme random forcing conserves water and bounds fluxes (7.745504ms)
+✔ Reference ignores future years (2.914815ms)
+✔ Ties yield 50 and constant-reference flag (1.52845ms)
+✔ Reference mismatch and short baseline are rejected (0.873954ms)
+✔ Partial month gets no percentile; extremes are bounded (1.579145ms)
+✔ CSV export quotes fields and protects spreadsheet formula strings (0.315385ms)
+✔ Normal quantile agrees with known probabilities (1.417974ms)
+✔ Relative transpiration is ratio of sums, not mean of ratios (1.489922ms)
+✔ No demand, gaps and partial months never become drought or normal (1.44227ms)
+✔ Seasonal calibration does not mix months (2.951171ms)
+✔ Constant and short references are explicitly undefined (1.634409ms)
+✔ Bounds and ties do not create infinite scores (1.169811ms)
+✔ Future values cannot modify the frozen historical reference (26.206829ms)
+✔ Appending unseen months does not revise past scores after calibration (10.230262ms)
+✔ Severity, mean magnitude and confirmation are distinct (0.666142ms)
+✔ One-month signal is rejected by two-month persistence (0.217197ms)
+✔ Missing observations split episodes and flag truncation (0.289435ms)
+✔ Positive lead means candidate earlier, and matching is one-to-one (0.741616ms)
+✔ No signal is not perfect skill and missing is not absence (0.408965ms)
+✔ Independent observed timeline supports misses and false alarms (0.404969ms)
+✔ Pairing cannot cross unobserved gap (0.203857ms)
+✔ Native imported values and metadata are retained, duplicates rejected (8.164794ms)
+✔ At most one candidate matches a reference episode (0.509807ms)
+✔ Complete partner of a censored match is excluded from event POD/FAR denominators (0.402562ms)
+✔ Months missing from both series are counted and break episodes (0.519021ms)
+✔ Actual UI worker handles three complete sites and reports progress (787.467118ms)
+✔ Actual UI worker returns a readable error instead of partial success (68.763519ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 973.495472
